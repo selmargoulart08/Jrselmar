@@ -1,0 +1,16 @@
+import sqlite3
+
+conn = sqlite3.connect('database.db')
+
+cursor = conn.cursor()
+
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS Prodcts (
+    Id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL ,
+    price TEXT NOT NULL,
+      
+);
+""")
+
+print("Conectado ao banco de dados")
